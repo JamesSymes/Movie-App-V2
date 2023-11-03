@@ -1,0 +1,460 @@
+.movie-list {
+  display: flex; /* Change to flex for horizontal layout */
+  flex-wrap: nowrap; /* Ensure items do not wrap to the next line */
+  gap: 0.5vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
+
+  background-color: #151515;
+  overflow-x: auto; /* Allows horizontal scroll */
+  overflow-y: hidden; /* Prevents vertical scroll */
+  width: 100%;
+  scrollbar-width: none; /* Adjust the scrollbar width (for Firefox) */
+
+  position: relative;
+}
+
+
+/* Add styles for Chrome, Edge, and Safari scrollbars */
+.movie-list::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}
+
+.movie-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1.5625vw;
+}
+
+
+
+
+
+
+.page-content {
+  padding-top: 5.46875vw; 
+background-color: #151515;
+  /* overflow-x: hidden;
+  
+  max-width: 1280px;
+  margin: 0 auto; 
+  overflow-x: hidden; 
+  padding-left: 1%;  */
+}
+
+.section {
+  
+  background-color: #151515;
+  position: relative;
+}
+
+.section-link-container {
+  position: absolute;
+  right: 0; /* Add this so the button is on the left side */
+  top: calc(50% - 1.953125vw);
+  transform: translateY(-50%);
+  padding-right: 1.1vw; /* so the > appears inside the image */
+}
+
+.section-link-container-left {
+  position: absolute;
+  left: 0; 
+  top: calc(50% - 1.953125vw);
+  transform: translateY(-50%);
+  padding-left: 1.1vw; /* so the > appears inside the image */
+}
+
+.section-link {
+  position: relative;
+  /* padding-left: calc(1% + 15px); */
+  font-size: 5vw; 
+  color: white;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out;
+  display: flex;
+  z-index: 2;
+}
+
+.section-link-shadow {
+  position: absolute;
+  /* top: calc(50% - 1.953125vw); */
+
+  transform: translateY(-50%);
+  right: 0;  /* Distance from the right edge - adjust as needed */
+  background-color: #151515a4;
+  border-radius: 2%;
+  width: 5.25vw;  /* Adjust the width as needed */
+  height: 25vw;  /* Adjust the height as needed */
+  z-index: -1;  /* Ensure the shadow appears behind the > link */
+}
+
+.section-link-shadow-left {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 0;  /* Distance from the right edge - adjust as needed */
+  background-color: #151515a4;
+  border-radius: 2%;
+  width: 5.5vw;  /* Adjust the width as needed */
+  height: 25vw;  /* Adjust the height as needed */
+  z-index: -1;  /* Ensure the shadow appears behind the > link */
+}
+
+
+.section-link:hover {
+  transform: scale(1.3);
+  color: white;
+}
+
+
+
+
+
+
+.section-title {
+  padding-left: 6vw; 
+  color: white; 
+  font-size: 1.5vw;
+  margin-bottom: -0.09vw;
+}
+
+
+
+
+
+.movie-card {
+  text-align: center;
+  margin: 0px;
+  transition: transform 0.3s ease-in-out;
+  width: 12vw;  /* As previously discussed */
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  margin-top: 1.25vw;
+  border-radius: 0.25vw;
+}
+
+/* .movie-card h3 {
+  margin-top: 0.78125vw;
+} */
+
+.movie-card-container {
+  text-align: center;
+  margin: 0px;
+  transition: transform 0.3s ease-in-out;
+  width: 12vw; 
+}
+
+.movie-card-container:hover {
+  transform: scale(1.1); 
+}
+
+.movie-card-container:hover .button-container {
+  opacity: 1; 
+}
+
+.button-container {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 0.78125vw;
+  margin-bottom: 1.6vw;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.movie-card:hover ~ .button-container {
+  opacity: 1; 
+}
+
+.round-button {
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5625vw;
+  color: #ddd;  /* Neutral color */
+  text-decoration: none;
+  border: 0.15625vw solid #ddd;  /* Neutral border */
+  outline: none;
+  cursor: pointer;
+  margin: 0 0.78125vw;
+  transition: all 0.3s ease-in-out;  /* Transition for all properties */
+  background-color: #333;  /* Darker background */
+}
+
+.movie-card-container:hover .round-button {
+  transform: scale(1.1); 
+  color: #fff;  /* On hover, brighten the icon */
+  border-color: #fff;  /* And the border too */
+}
+
+
+
+.cart-button:hover {
+  color: #c6c6c6;;
+  background-color:  #000000
+}
+
+.info-button:hover {
+  color: #c6c6c6;;
+  background-color:  #000000
+}
+
+.featured-movie {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  .movie-list {
+    display: flex; 
+    flex-wrap: nowrap; 
+    gap: 1.5vw; /* Updated */
+    padding-left: 1.5vw; /* Updated */
+    padding-right: 1.5vw; /* Updated */
+    background-color: #151515;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    width: 100%;
+    scrollbar-width: none; 
+    position: relative;
+  }
+  
+  
+
+  .movie-list::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .movie-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .movie-list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1.5625vw;
+  }
+  
+
+
+
+  .page-content {
+    padding-top: 20vh; 
+  background-color: #151515;
+  }
+
+/* Featured Movie For Mobile */
+  .featured-movie {
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+
+  
+
+  .featured-movie-card-wrapper {
+    width: 90vw;  /* 90% of the viewport width */
+    height: auto;
+    /* ... other styles for the featured movie card ... */
+  }
+/* Featured Movie For Mobile */
+.featured-movie-card-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+  /* ... other styles for the featured movie card wrapper ... */
+}
+
+.featured-movie-card-wrapper .featured-movie-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4%;
+  box-shadow: 4%;
+}
+
+
+  
+  .movie-card-container.featured .movie-card img {
+    /* Specific styles for the image of the featured movie card */
+    max-width: 100%;
+    height: auto;
+    
+  }
+
+  
+  .section {
+    
+    background-color: #151515;
+    position: relative;
+  }
+  
+  .section-link-container {
+    position: absolute;
+    right: 0; 
+    top: calc(50% - 1.953125vw);
+    transform: translateY(-50%);
+    padding-right: 1.1vw; 
+  }
+  
+  .section-link-container-left {
+    position: absolute;
+    left: 0; 
+    top: calc(50% - 1.953125vw);
+    transform: translateY(-50%);
+    padding-left: 1.1vw; 
+  }
+  
+  .section-link {
+    position: relative;
+    font-size: 5vw; 
+    color: white;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+    display: flex;
+    z-index: 2;
+  }
+  
+  .section-link-shadow {
+    position: absolute;
+    transform: translateY(-50%);
+    right: 0;  
+    background-color: #151515a4;
+    border-radius: 2%;
+    width: 5.25vw; 
+    height: 25vw;  
+    z-index: -1;
+  }
+  
+  .section-link-shadow-left {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0;  
+    background-color: #151515a4;
+    border-radius: 2%;
+    width: 5.5vw;  
+    height: 25vw;  
+    z-index: -1; 
+  }
+  
+  
+  .section-link:hover {
+    transform: scale(1.3);
+    color: white;
+  }
+  
+  
+  
+  
+  
+  
+  .section-title {
+    padding-left: 1.5vw;
+    color: rgb(222, 222, 222); 
+    font-size: 4.2vw;
+    margin-bottom: -0.09vw;
+  }
+  
+  
+  
+  
+  
+  .movie-card {
+    text-align: center;
+    margin: 0px;
+    transition: transform 0.3s ease-in-out;
+    width: 26.8571429vw; /* Updated */
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    margin-top: 1.25vw;
+    border-radius: 1.6vw;
+  }
+  
+
+  
+  .movie-card-container {
+    text-align: center;
+    margin: 0px;
+    transition: transform 0.3s ease-in-out;
+    width: 26.8571429vw; /* Updated */
+  }
+  
+  .movie-card-container:hover {
+    transform: scale(1.1); 
+  }
+  
+  .movie-card-container:hover .button-container {
+    opacity: 1; 
+  }
+  
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 0.78125vw;
+    margin-bottom: 1.6vw;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .movie-card:hover ~ .button-container {
+    opacity: 1; 
+  }
+  
+  .round-button {
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5625vw;
+    color: #ddd;  
+    text-decoration: none;
+    border: 0.15625vw solid #ddd;  
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.78125vw;
+    transition: all 0.3s ease-in-out;  
+    background-color: #333;  
+  }
+  
+  .movie-card-container:hover .round-button {
+    transform: scale(1.1); 
+    color: #fff;  
+    border-color: #fff;  
+  }
+  
+  
+  
+  .cart-button:hover {
+    color: #c6c6c6;;
+    background-color:  #000000
+  }
+  
+  .info-button:hover {
+    color: #c6c6c6;;
+    background-color:  #000000
+  }
+  
+
+}

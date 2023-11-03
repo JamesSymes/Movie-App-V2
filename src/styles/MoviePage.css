@@ -1,0 +1,91 @@
+/* MoviePage.css */
+/* .movie-page-container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.poster-container {
+  flex: 0 0 auto;
+  max-width: 20%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.info-container {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.movie-page-container h2 {
+  font-size: 2em;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.movie-page-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+  max-width: 100%; 
+}
+
+.movie-page-container p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.movie-page-container .info-container {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #151515;
+}
+
+.cart-button {
+  background-color: #ffffff;
+  border: none;
+  color: #151515;
+  font-size: 1.5em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.add-to-cart-text {
+  margin-right: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.movie-page-price-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.movie-page-price {
+  color: #ffffff;
+  font-size: 26px !important;
+  font-weight: 500;
+  margin-right: 5px;
+}
+ */

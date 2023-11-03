@@ -1,0 +1,71 @@
+/* Confirmation.css */
+/* .conformation-page-content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #151515;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conformation-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #151515;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.confirmation {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.confirmation h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+.confirmation p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.confirmation h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.confirmation ul {
+  padding-left: 20px;
+  list-style-type: square;
+  color: #fff;
+}
+
+.confirmation li {
+  margin-bottom: 10px;
+}
+
+.confirmation li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  margin-right: 5px;
+  border-radius: 50%;
+} */

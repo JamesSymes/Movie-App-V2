@@ -1,0 +1,512 @@
+/* Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125vw;
+  padding: 0 1.0417vw;
+  background-color: #151515;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  padding-top: 0.5vw;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header__logo {
+  color: #E50914;
+  padding-left: 6vw; 
+  font-size: 1.875vw;
+  font-weight: 800; 
+  text-decoration: none;
+}
+
+
+.header__nav {
+  display: flex;
+  list-style: none;
+}
+
+
+.header__nav > li {
+  margin: 0 0.78125vw;
+}
+
+.header__nav > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__nav > li > a:hover {
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 8.3333vw;
+  z-index: 1;
+  list-style: none;
+  background-color: #151515;
+  box-shadow: 0vw 0.4167vw 0.8333vw 0vw rgba(0,0,0,0.2);
+  column-count: 3;
+  column-gap: 1.0417vw;
+  padding-left: 0vw;
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 0.625vw 0.8333vw;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  text-decoration: underline;
+}
+
+
+
+.header__cart {
+  display: flex;
+  align-items: center;
+}
+
+.header-cart-count {
+  position: absolute;
+  top: -0.5208vw;
+  right: -0.5208vw;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.1042vw 0.3125vw;
+  font-size: 0.625vw;
+  transition: transform 3s; /* This will ensure a smooth animation */
+}
+
+.header-cart-count.animate {
+  transform: scale(4); /* This will enlarge the count by 10% */
+}
+
+.header-cart-symbol {
+  font-size: 125%; 
+}
+
+.header-cart-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 5.2083vw;
+}
+
+.header-cart-button:hover {
+  color: grey;
+}
+
+.header-cart-count {
+  margin-left: 0.2604vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Additions for mobile responsive design */
+@media (max-width: 768px) {
+/* Header.css */
+/* Header.css */
+.header {
+  /* position: fixed; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  /* padding: 0 1.0417vw; */
+  background-color: #151515;
+  /* color: white; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  z-index: 2;
+
+
+  padding-top: 4vh; /* To see the cart count */
+
+ flex-direction: column; /*  Upadte */
+
+
+/* 
+ background: rgba(21, 21, 21, 0.153);  
+  backdrop-filter: blur(40px); 
+  padding-bottom: 15vh;
+  transition: padding-bottom 0.3s; */
+
+  
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Situates the pseudo-element behind the header content */
+  /* background: rgba(21, 21, 21, 0.5);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px); */
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.header.scrolled::before {
+  background: rgba(21, 21, 21, 0.153);  /* slightly transparent background */
+  backdrop-filter: blur(40px);
+}
+
+/* Ensure the rest of the header content is not blurred */
+.header__top,
+.header__nav,
+.header__content,
+.header__logo,
+.header__cart {
+  position: relative; /* This ensures they sit above the blurred pseudo-element */
+  z-index: 3; /* Higher than the pseudo-element to ensure they are on top */
+}
+
+/* Additional styles to handle the hiding/showing of navigation on scroll */
+.header.scrolled .header__nav {
+  display: none; /* Hide the navigation when scrolled */
+}
+
+.header.scrolled {
+  background: rgba(21, 21, 21, 0.153);  /* slightly transparent background */
+  backdrop-filter: blur(40px); /* blur effect */
+}
+
+/* You might want to hide the tabs section when scrolled */
+.header.scrolled .header__nav {
+  display: none; /* Hide tabs when scrolled */
+}
+
+.header.scrolled {
+  padding-bottom: 0; /* Remove padding when scrolled */
+}
+
+
+
+/* new for mobile */
+.header__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ height: 12vh; /*Logo area height */
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; /* Change to column layout */
+  padding-left: 0; /* Reset padding */
+  margin-right: 0; /* Remove right margin */
+  /* margin-bottom: 5vw; */
+
+}
+
+
+
+.header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.header__logo {
+  color: #E50914;
+  padding-left: 3vw; 
+  font-size: 5vw;
+  font-weight: 800; 
+  text-decoration: none;
+}
+
+
+/* .header__nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;  
+} */
+
+.header__nav ul {
+  display: flex;
+  justify-content: flex-start;  /* Align to the start/left */
+  list-style-type: none;  /* Remove bullets */
+  padding-left: 3vw;  /* Remove default padding */
+}
+
+
+
+
+.header__nav ul li {
+  margin-right: 2vw;  /* 2vw gap between each item */
+}
+
+.header__nav ul li:last-child {
+  margin-right: 0;  /* Ensure the last item doesn't have extra margin */
+}
+
+.header__nav ul li a {
+  color: rgb(212, 213, 216);
+  text-decoration: none;
+  font-size: 3.0vw;
+  padding: 1.5vw 4vw;
+  border: 0.5vw solid rgba(160, 160, 160, 0.598);
+  border-radius: 4.5vw;
+  font-weight: 500;
+}
+
+
+
+
+
+.header__nav li a {
+  color: rgb(212, 213, 216);
+  text-decoration: none;
+  font-size: 3.0vw;
+  padding: 1.5vw 4vw;
+  border: 0.5vw solid rgba(160, 160, 160, 0.598);
+  border-radius: 4.5vw;
+  /* left: 0.5vw; */
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header__nav > li {
+  margin: 0 0.78125vw;
+}
+
+.header__nav > li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;  /* Adjust as needed */
+  padding: 0.5vw 1vw;  /* padding for a more button-like appearance */
+  border: 0.2vw solid white;  /* border to give it the button look */
+  border-radius: 0.5vw;  /* rounded corners for a softer look */
+}
+
+
+.header__nav > li > a:hover {
+  color: #151515;  /* change text color on hover */
+  background-color: white;  /* change background to white on hover */
+}
+
+
+.fullscreen-dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+  overflow-y: auto;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* This ensures that content stays on the left */
+  padding: 1.5vw 0.5vw;
+  margin-right: 0; /* Remove right margin */
+  margin-bottom: 0vw; /* Add bottom margin for spacing */
+  text-align: center; /* Center text */
+  border: none; /* Remove the border */
+}
+
+.dropdown-content {
+  list-style-type: none;
+  width: 100%;
+  display: flex; /* Keep the dropdown content as a horizontal flex container */
+  flex-direction: column; /* Change to column layout for list items */
+  align-items: flex-start; /* Align list items to the left */
+  padding-left: 0; /* Reset padding */
+  background: #00bbff13;
+  backdrop-filter: blur(45px);
+  padding-top: 12vw;
+}
+
+.dropdown-content li {
+  margin-right: 0; /* Remove right margin */
+  margin-bottom: 1vw; /* Add bottom margin for spacing */
+}
+
+.dropdown-close-button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering the button */
+  background: #FFF;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2; /* Ensure the close button is on top */
+}
+
+/* .dropdown-close-button:before {
+  content: 'X'; 
+  font-weight: bold;
+  color: #001F3F; 
+  font-size: 24px; 
+} */
+
+.close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-weight: bold;
+  color: #001F3F; 
+  font-size: 24px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header__cart {
+  display: flex;
+  align-items: center;
+
+}
+
+.header-cart-count {
+  position: absolute;
+  top: -3.5vw; /* Updated */
+  right: -4.5vw; /* Updated */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.8vw 2vw;
+  font-size: 3.625vw;
+  transition: transform 3s; /* This will ensure a smooth animation */
+}
+
+.header-cart-count.animate {
+  transform: scale(4); /* This will enlarge the count by 10% */
+}
+
+.header-cart-symbol {
+  font-size: 140%; 
+}
+
+.header-cart-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 5.2083vw;
+}
+
+.header-cart-button:hover {
+  color: grey;
+}
+
+
+
+
+
+
+
+
+
+.dropdown-content li:last-child {
+  margin-bottom: 0; 
+}
+
+/* Dropdown Text Styling  */
+.fullscreen-dropdown .dropdown-content li a {
+  padding-left: 4vw;
+  padding-bottom: 3.5vw;
+  text-align: center; /* Center text */
+  border: none; /* Remove the border */
+  font-size: 5vw;
+}
+
+
+
+
+
+}

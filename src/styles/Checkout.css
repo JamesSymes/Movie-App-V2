@@ -1,0 +1,71 @@
+/* Checkout.css */
+/* .checkout-page-content {
+  padding-top: 70px; 
+  padding-bottom: 70px;
+  background-color: #151515;
+  min-height: 100vh; 
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  padding-top: 50px;
+}
+
+.checkout h2 {
+  color: #fff; 
+}
+
+.checkout form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #151515;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.checkout p {
+  color: #fff; 
+  font-size: 1.2em; 
+  margin-bottom: 5px; 
+}
+
+.checkout p.total {
+  font-weight: bold; 
+}
+
+
+
+.checkout label {
+  display: flex;
+  flex-direction: column;
+  color: #fff; 
+}
+
+.checkout input {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #000;
+}
+
+.checkout input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+} */
